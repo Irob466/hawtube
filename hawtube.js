@@ -8,7 +8,5 @@ silhouette.style.zIndex = 1;
 
 document.querySelector("#videowrap").appendChild(silhouette);
 
-window.onload = function() {
-    const audio = new Audio('https://irob466.github.io/hawtube/jackass.mp3');
-    audio.addEventListener('canplaythrough', e => audio.play());
-}
+const audio = new Audio('https://irob466.github.io/hawtube/jackass.mp3');
+audio.addEventListener('canplaythrough', e => audio.play());
