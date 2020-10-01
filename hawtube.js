@@ -23,9 +23,10 @@ const frostedPane = document.createElement('div');
 frostedPane.classList.add('frosted-pane');
 frostedPane.appendChild(brb);
 brbSound.addEventListener('canplaythrough', e => {
-    brbSound.play();
     document.body.appendChild(frostedPane);
     document.body.style.overflow = 'hidden';
+    window.scrollTo(0,0);
+    brbSound.play();
 });
 
 brbSound.addEventListener('ended', e => {
