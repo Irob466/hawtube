@@ -25,10 +25,12 @@ frostedPane.appendChild(brb);
 brbSound.addEventListener('canplaythrough', e => {
     brbSound.play();
     document.body.appendChild(frostedPane);
+    document.body.style.overflow = 'hidden';
 });
 
 brbSound.addEventListener('ended', e => {
     document.body.removeChild(frostedPane);
+    document.body.style.overflow = 'visible';
     frostedPane = null;
     brb = null;
 });
