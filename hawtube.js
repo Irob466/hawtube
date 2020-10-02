@@ -49,4 +49,4 @@ function beRightBack() {
 }
 
 mst3k();
-beRightBack();
+[jackass, beRightBack][Math.floor(Math.random() * 2)]();
