@@ -63,8 +63,8 @@ function popups() {
 
     const height = window.innerHeight - 400;
     const width = window.innerWidth - 800;
-    ieWindow.style.top = Math.ceil(Math.random() * height);
-    ieWindow.style.left = Math.ceil(Math.random() * width);
+    ieWindow.style.top = `${Math.ceil(Math.random() * height)}px`;
+    ieWindow.style.left = `${Math.ceil(Math.random() * width)}px`;
 
     document.body.appendChild(ieWindow);
     setTimeout(() => {
