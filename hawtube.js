@@ -19,12 +19,12 @@ function jackass() {
 
 // we'll be right back
 function beRightBack() {
-    const brb = new Image();
+    let brb = new Image();
     brb.src = `${BASE_URL}/wellbrb.png`;
     brb.classList.add('brb');
     const brbSound = new Audio(`${BASE_URL}/wellbrb.mp3`);
 
-    const frostedPane = document.createElement('div');
+    let frostedPane = document.createElement('div');
     frostedPane.classList.add('frosted-pane');
     frostedPane.appendChild(brb);
 
@@ -48,5 +48,31 @@ function beRightBack() {
     });
 }
 
+function popups() {
+    let ieWindow = document.createElement('div');
+    ieWindow.classList.add('ms-window');
+    ieWindow.innerHTML = `
+        <header class="ms-header">
+            <img src="https://irob466.github.io/hawtube/static/html-0.png">
+            <span>You've won an iPod - Microsoft Internet Explorer</span>
+            <div class="window-icon minimise"></div>
+            <div class="window-icon maximise"></div>
+            <div class="window-icon close"></div>
+        </header>
+        <img src="https://irob466.github.io/hawtube/static/inner-winner.jpg">`;
+
+    const height = window.innerHeight - 400;
+    const width = window.innerWidth - 800;
+    ieWindow.style.top = Math.ceil(Math.random() * height);
+    ieWindow.style.left = Math.ceil(Math.random() * width);
+
+    document.appendChild(ieWindow);
+    setTimeout(() => {
+        document.removeChild(ieWindow);
+        ieWindow = null;
+    }, 7000);
+}
+
 mst3k();
-[jackass, beRightBack][Math.floor(Math.random() * 2)]();
+popups();
+// [jackass, beRightBack][Math.floor(Math.random() * 2)]();
