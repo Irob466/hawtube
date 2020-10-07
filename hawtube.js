@@ -55,9 +55,9 @@ function popups() {
         <header class="ms-header">
             <img src="https://irob466.github.io/hawtube/static/html-0.png">
             <span>You've won an iPod - Microsoft Internet Explorer</span>
-            <div class="window-icon minimise"></div>
-            <div class="window-icon maximise"></div>
-            <div class="window-icon close"></div>
+            <div class="ms-window-icon minimise"></div>
+            <div class="ms-window-icon maximise"></div>
+            <div class="ms-window-icon close"></div>
         </header>
         <img src="https://irob466.github.io/hawtube/static/inner-winner.jpg">`;
 
