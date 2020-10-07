@@ -1,4 +1,5 @@
 const BASE_URL = 'https://irob466.github.io/hawtube/static'
+const openers = [jackass, beRightBack, popups];
 
 // mst3k silhouette
 function mst3k() {
@@ -74,5 +75,4 @@ function popups() {
 }
 
 mst3k();
-popups();
-// [jackass, beRightBack][Math.floor(Math.random() * 2)]();
+openers[Math.floor(Math.random() * openers.length)]();
