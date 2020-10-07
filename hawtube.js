@@ -66,9 +66,9 @@ function popups() {
     ieWindow.style.top = Math.ceil(Math.random() * height);
     ieWindow.style.left = Math.ceil(Math.random() * width);
 
-    document.appendChild(ieWindow);
+    document.body.appendChild(ieWindow);
     setTimeout(() => {
-        document.removeChild(ieWindow);
+        document.body.removeChild(ieWindow);
         ieWindow = null;
     }, 7000);
 }
