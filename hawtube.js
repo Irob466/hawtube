@@ -61,9 +61,9 @@ function popups() {
         </header>
         <img src="https://irob466.github.io/hawtube/static/inner-winner.jpg">`;
 
-    const height = window.innerHeight - 400;
+    const height = window.innerHeight - 600;
     const width = window.innerWidth - 800;
-    ieWindow.style.top = `${Math.ceil(Math.random() * height)}px`;
+    ieWindow.style.top = `${Math.ceil(Math.random() * height) + 150}px`;
     ieWindow.style.left = `${Math.ceil(Math.random() * width)}px`;
 
     document.body.appendChild(ieWindow);
