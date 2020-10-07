@@ -1,4 +1,4 @@
-const BASE_URL = 'https://irob466.github.io/hawtube'
+const BASE_URL = 'https://irob466.github.io/hawtube/assets'
 
 // mst3k silhouette
 function mst3k() {
