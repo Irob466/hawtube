@@ -90,7 +90,8 @@ function waHo() {
           console.log(mutation.addedNodes);
           const children = Array.from(mutation.addedNodes);
           children
-            .filter(node => node.classList.contains('waho-container'))
+            .filter(node => !!node.querySelector('.waho-container'))
+            .map(node => node.querySelector('.waho-container'))
             .forEach(node => {
               const text = node.innerText.split('');
               const parent = node.parentNode;
