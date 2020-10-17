@@ -87,6 +87,7 @@ function waHo() {
     mutations.forEach(mutation => {
       switch (mutation.type) {
         case ('childList'):
+          console.log(mutation.addedNodes);
           const children = Array.from(mutation.addedNodes);
           children
             .filter(node => node.classList.contains('waho-container'))
