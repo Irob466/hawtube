@@ -87,7 +87,6 @@ function waHo() {
     mutations.forEach(mutation => {
       switch (mutation.type) {
         case ('childList'):
-          console.log(mutation.addedNodes);
           const children = Array.from(mutation.addedNodes);
           children
             .filter(node => !!node.querySelector('.waho-container'))
@@ -98,7 +97,7 @@ function waHo() {
               parent.removeChild(node);
               text.forEach(letter => {
                 const container = document.createElement('span');
-                container.innerHTML = `<p style="margin: auto; color: #231F20;">letter</p>`;
+                container.innerHTML = `<p style="margin: auto; color: #231F20;">${letter}</p>`;
                 container.classList.add(/\s/.test(letter) ? 'waho-space' : 'waho-letter');
                 parent.appendChild(container);
               })
