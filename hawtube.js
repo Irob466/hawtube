@@ -74,34 +74,34 @@ function popups() {
   }, 7000);
 }
 
+function waHoTransform(elements) {
+  elements
+    .filter(node => !!node.querySelector('.waho-container'))
+    .map(node => node.querySelector('.waho-container'))
+    .forEach(node => {
+      const text = node.innerText.split('');
+      const parent = node.parentNode;
+      parent.removeChild(node);
+      text.forEach(letter => {
+        const container = document.createElement('span');
+        container.innerHTML = `<p style="margin: auto; color: #231F20;">${letter}</p>`;
+        container.classList.add(/\s/.test(letter) ? 'waho-space' : 'waho-letter');
+        parent.appendChild(container);
+      });
+    });
+}
+
 function waHo() {
   const chatBox = document.querySelector('#messagebuffer');
+  waHoTransform(Array.from(chatBox.childNodes));
+
   const config = { childList: true };
 
-  /**
-   * 
-   * @param {MutationRecord[]} mutations 
-   * @param {MutationObserver} observer 
-   */
   const callback = (mutations, observer) => {
     mutations.forEach(mutation => {
       switch (mutation.type) {
         case ('childList'):
-          const children = Array.from(mutation.addedNodes);
-          children
-            .filter(node => !!node.querySelector('.waho-container'))
-            .map(node => node.querySelector('.waho-container'))
-            .forEach(node => {
-              const text = node.innerText.split('');
-              const parent = node.parentNode;
-              parent.removeChild(node);
-              text.forEach(letter => {
-                const container = document.createElement('span');
-                container.innerHTML = `<p style="margin: auto; color: #231F20;">${letter}</p>`;
-                container.classList.add(/\s/.test(letter) ? 'waho-space' : 'waho-letter');
-                parent.appendChild(container);
-              })
-            })
+          waHoTransform(Array.from(mutation.addedNodes));
           break;
         default:
           break;
