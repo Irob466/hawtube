@@ -15,8 +15,8 @@ function mst3k() {
   button.classList.add(["btn", "btn-sm", "btn-default"]);
   button.innerText = "Hide MST3K Boys";
   button.addEventListener('click', () => {
-    button.classList.toggle("hide-sil");
-    const action = button.classList.contains("hide-sil") ? "Show" : "Hide"
+    silhouette.classList.toggle("hidden");
+    const action = silhouette.classList.contains("hidden") ? "Show" : "Hide"
     button.innerText = `${action} MST3K Boys`
   });
 
