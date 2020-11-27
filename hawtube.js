@@ -12,7 +12,7 @@ function mst3k() {
   document.querySelector("#videowrap").appendChild(silhouette);
 
   const button = document.createElement("button")
-  button.classList.add(["btn", "btn-sm", "btn-default"]);
+  button.classList.add("btn btn-sm btn-default");
   button.innerText = "Hide MST3K Boys";
   button.addEventListener('click', () => {
     silhouette.classList.toggle("hidden");
