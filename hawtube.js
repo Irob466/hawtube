@@ -10,6 +10,17 @@ function mst3k() {
   silhouette.style.right = "15px";
   silhouette.style.zIndex = 1;
   document.querySelector("#videowrap").appendChild(silhouette);
+
+  const button = document.createElement("button")
+  button.classList.add(["btn", "btn-sm", "btn-default"]);
+  button.innerText = "Hide MST3K Boys";
+  button.addEventListener('click', () => {
+    button.classList.toggle("hide-sil");
+    const action = button.classList.contains("hide-sil") ? "Show" : "Hide"
+    button.innerText = `${action} MST3K Boys`
+  });
+
+  document.querySelector("#leftcontrols").appendChild(button);
 }
 
 // jackass intro
